@@ -1,11 +1,15 @@
 pixy2_ros
 =========
 
-Basic ROS node to publish image from a [pixy2](http://www.cmucam.org/projects/cmucam5/wiki) camera.
+Basic ROS node to publish image from a [pixy2](https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:start) camera.
 
 This code is based in the orginal code [erle_pixy](https://github.com/erlerobot/erle_pixy/) for version 1.0.
 
-# Add permissions for Pixy USB interface
+## Build Pixy2
+
+Follow the following [steps](https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:building_libpixyusb_as_a_python_module_on_linux).
+
+## Add permissions for Pixy USB interface
 
 In order to communicate with Pixy over USB as a non-root user you must set permissions for Pixy.
 
@@ -15,7 +19,7 @@ To do this copy the 'pixy.rules' file to '/etc/udev/rules.d'
 sudo cp pixy.rules /etc/udev/rules.d/
 ```
 
-#Compile the code 
+## Compile the code 
 
 Add this folder to `catkin_ws/src` or similar ROS workspace and then compile the code:
 
@@ -30,7 +34,7 @@ You need to load the script:
 >> source <your catkin_worspace>/devel/setup.bash
 ```
 
-#Usage
+## Usage
 
 Whit this component you can see the image from Pixy2 Cam.
 
@@ -38,7 +42,7 @@ Whit this component you can see the image from Pixy2 Cam.
 >>rosrun pixy2_ros pixy2_cam
 ```
 
-#Parameters
+## Parameters
 
 `image_raw` to change the desired topic for example:
 
@@ -52,8 +56,7 @@ Whit this component you can see the image from Pixy2 Cam.
 <param name="frame_rate" type="int" value="5" />
 ```
 
-
-#Show the image
+## Show the image
 
 To visualize the image to need to run:
 
